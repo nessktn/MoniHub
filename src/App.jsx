@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { BottomNavigation } from './components/BottomNavigation';
 import { HomePage } from './pages/HomePage';
 import { LearningPage } from './pages/LearningPage';
@@ -9,7 +9,7 @@ import './index.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="w-full h-screen bg-white flex flex-col">
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -26,7 +26,7 @@ function App() {
           <Route path="*" element={<BottomNavigation />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
